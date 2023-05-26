@@ -9,10 +9,10 @@ function Section(props) {
   return (
     <>
     <div className= "row mt-5 justify-content-evenly bg-dark-subtle">
-        <div className="p-3 m-0">
+        <div className="px-3 pt-3 pb-1 m-0">
             <b><h1>{title}</h1></b>
         </div>
-        <div className="p-3 m-0 border-0">
+        <div className="px-3 pb-3 m-0 border-0">
           {body}
         </div>
     </div>

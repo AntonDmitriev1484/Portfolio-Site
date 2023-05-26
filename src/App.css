@@ -10,6 +10,22 @@
   text-decoration:none;
 }
 
+.link-sidebar:hover {
+  color:dodgerblue
+}
+
+.link-body {
+  color: dodgerblue;
+  text-decoration:none;
+}
+.link-body:hover {
+  color: black
+}
+
+.txt-h {
+  color: dodgerblue
+}
+
 
 .home,
 .services,

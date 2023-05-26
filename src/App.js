@@ -16,8 +16,9 @@ function App() {
 
   const about_section_body = (
     <div>
-      <h5>Undergraduate student researcher at Washington University in St. Louis </h5>
-      <h5>Bachelors of Science in Computer Science, Minor in Architecture - 2024</h5>
+      <p>Undergraduate <span className="txt-h" >student</span> researcher at Washington University in St. Louis pursuing a Bachelors in Computer Science (2020-2024).</p>
+      <p>I'm a senior at WashU looking to pursue a graduate CS education</p>
+      <p>Contact => <a className="link-body"> Github </a> / <a className="link-body"> LinkedIn </a> / <a className="link-body"> Email </a> </p>
     </div>
   )
 
@@ -25,7 +26,8 @@ function App() {
       [ <Section title="About" body={about_section_body}/> , "About"]
   )
 
-  //Mess around with a timeline thing
+
+  //event start, end, body
   const experience_section_body = (
     <>
     <Timeline/>
@@ -76,7 +78,7 @@ function App() {
 
       <NavBar first="Anton" last="Dmitriev" links_arr={sections_arr.map( x => x[1])}/>
 
-      <div className="container-lg offset-from-top floats-right">
+      <div className="container-lg w-75 offset-from-top floats-right">
 
         <div className="p-3 border-0 d-grid gap-3">
 
