@@ -5,6 +5,7 @@ import NavBar from "./components/NavBar";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './components/hero.css';
 import Timeline from './components/Timeline';
+import TimelineEvent from './components/TimelineEvent';
 
 function App() {
 
@@ -27,16 +28,75 @@ function App() {
   )
 
 
+  // ----
+
+  let timeline_event_arr = [];
+  
+  timeline_event_arr.push(
+    (<TimelineEvent start_date="8/2020" 
+            end_date="5/2022"
+            title="Teaching Assistant Lead, WashU Intro to CS"
+            place="WashU"
+            body= {(
+              <>
+              <p class="timeline__paragraph">
+                  Intro to CS is WashU's highest enrolled class, it hires roughly 50 TA's per semester.
+              </p>
+              <ul>
+                  <li>
+                      Directed office hours and group learning sessions while also overseeing 30 teaching assistants as a section lead.
+                  </li>
+                  <li>
+                      Graded and provided feedback on student work.
+                  </li>
+                  <li>
+                      Assisted 300+ students in one on one help sessions.
+                  </li>
+                  
+                  </ul>
+                  </>
+            )}
+            />
+            )
+  )
+
+  timeline_event_arr.push(
+    (<TimelineEvent start_date="5/2022" 
+            end_date="8/2022"
+            title="Camp Instructor, iDTech"
+            place="iDTech"
+            body= {(
+              <>
+              <p class="timeline__paragraph">
+                  Suffered a lot
+              </p>
+              <ul>
+                  <li>
+                    Taught computer science fundamentals in Python, Java, and Lua to classrooms of 10 K-12 students.
+                  </li>
+                  <li>
+                    Created accelerated curricula for K-12 students derived from university level computer science courses.
+                  </li>
+                  
+                  </ul>
+                  </>
+            )}
+            />
+            )
+  )
+
   //event start, end, body
   const experience_section_body = (
     <>
-    <Timeline/>
+    <Timeline timeline_event_arr={timeline_event_arr}/>
     </>
   )
 
   sections_arr.push(
       [ <Section title="Experience" body={experience_section_body}/> , "Experience"]
   )
+
+  // ----
 
   const research_section_body = (
     <>
