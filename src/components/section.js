@@ -1,5 +1,5 @@
 import React from "react";
-import SectionBody from './sectionbody'
+import SectionBody from './SectionBody'
 
 function Section(props) {
     const {title, body} = props;
@@ -12,7 +12,9 @@ function Section(props) {
         <div className="p-3 m-0">
             <b><h1>{title}</h1></b>
         </div>
-        <SectionBody text="body here"/>
+        <div className="p-3 m-0 border-0">
+          {body}
+        </div>
     </div>
     </>
   );
