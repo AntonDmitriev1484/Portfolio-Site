@@ -13,7 +13,7 @@ function TimelineEvent(props) {
                 <div class="timeline__point"></div>
             </div>
             <div class="timeline__component ">
-                <h2 class="timeline__title">{title}</h2>
+                <h2 class="timeline__title">{title} // {place} </h2>
 
                 {body}
 

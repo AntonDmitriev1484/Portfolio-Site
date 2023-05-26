@@ -9,17 +9,13 @@ import TimelineEvent from './components/TimelineEvent';
 
 function App() {
 
-  //No idea offset-from-top works differnetly between the 
-  //main container and the sidebar
-
-
   let sections_arr = []
 
   const about_section_body = (
     <div>
       <p>Undergraduate <span className="txt-h" >student</span> researcher at Washington University in St. Louis pursuing a Bachelors in Computer Science (2020-2024).</p>
       <p>I'm a senior at WashU looking to pursue a graduate CS education</p>
-      <p>Contact => <a className="link-body"> Github </a> / <a className="link-body"> LinkedIn </a> / <a className="link-body"> Email </a> </p>
+      <p> <a className="link-body"> Github </a> / <a className="link-body"> LinkedIn </a> / <a className="link-body"> Email </a> </p>
     </div>
   )
 
@@ -35,11 +31,11 @@ function App() {
   timeline_event_arr.push(
     (<TimelineEvent start_date="8/2020" 
             end_date="5/2022"
-            title="Teaching Assistant Lead, WashU Intro to CS"
+            title="Teaching Assistant Lead, Intro to Computer Science"
             place="WashU"
             body= {(
               <>
-              <p class="timeline__paragraph">
+              {/* <p class="timeline__paragraph">
                   Intro to CS is WashU's highest enrolled class, it hires roughly 50 TA's per semester.
               </p>
               <ul>
@@ -53,7 +49,7 @@ function App() {
                       Assisted 300+ students in one on one help sessions.
                   </li>
                   
-                  </ul>
+                  </ul> */}
                   </>
             )}
             />
@@ -63,11 +59,11 @@ function App() {
   timeline_event_arr.push(
     (<TimelineEvent start_date="5/2022" 
             end_date="8/2022"
-            title="Camp Instructor, iDTech"
+            title="Camp Instructor"
             place="iDTech"
             body= {(
               <>
-              <p class="timeline__paragraph">
+              {/* <p class="timeline__paragraph">
                   Suffered a lot
               </p>
               <ul>
@@ -78,8 +74,50 @@ function App() {
                     Created accelerated curricula for K-12 students derived from university level computer science courses.
                   </li>
                   
-                  </ul>
+                  </ul> */}
                   </>
+            )}
+            />
+            )
+  )
+
+  timeline_event_arr.push(
+    (<TimelineEvent start_date="8/2022" 
+            end_date="5/2023"
+            title="Undergraduate Researcher, Catoptric Surface Project"
+            place="WashU"
+            body= {(
+              <>
+
+                </>
+            )}
+            />
+            )
+  )
+
+  timeline_event_arr.push(
+    (<TimelineEvent start_date="2/2023" 
+            end_date="5/2023"
+            title="Teaching Assistant, Intro to Parallel Programming"
+            place="WashU"
+            body= {(
+              <>
+
+                </>
+            )}
+            />
+            )
+  )
+
+  timeline_event_arr.push(
+    (<TimelineEvent start_date="6/2023" 
+            end_date="8/2023"
+            title="IoT-SITY REU"
+            place="UC-Irvine"
+            body= {(
+              <>
+
+                </>
             )}
             />
             )
@@ -119,10 +157,10 @@ function App() {
 
 
 
-  //1. github
-  //2. Sort body into components, clean up class name
-  //3. body should basically be its own unique contents, 
-  // that always gets rendered within a Section -> body should be JSX
+
+
+
+
 
   return (
 
