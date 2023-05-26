@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './components/hero.css';
 import Timeline from './components/Timeline';
 import TimelineEvent from './components/TimelineEvent';
+import { useRef } from 'react';
 
 function App() {
 
@@ -26,9 +27,11 @@ function App() {
 
   // ----
 
+  //Maybe group experience by year
+  // ex. 2020-2022: 131, iDTech as bullets
   let timeline_event_arr = [];
   
-  timeline_event_arr.push(
+  timeline_event_arr[4] = (
     (<TimelineEvent start_date="8/2020" 
             end_date="5/2022"
             title="Teaching Assistant Lead, Intro to Computer Science"
@@ -56,7 +59,7 @@ function App() {
             )
   )
 
-  timeline_event_arr.push(
+  timeline_event_arr[3] = (
     (<TimelineEvent start_date="5/2022" 
             end_date="8/2022"
             title="Camp Instructor"
@@ -81,7 +84,7 @@ function App() {
             )
   )
 
-  timeline_event_arr.push(
+  timeline_event_arr[2]=(
     (<TimelineEvent start_date="8/2022" 
             end_date="5/2023"
             title="Undergraduate Researcher, Catoptric Surface Project"
@@ -95,7 +98,7 @@ function App() {
             )
   )
 
-  timeline_event_arr.push(
+  timeline_event_arr[1] =(
     (<TimelineEvent start_date="2/2023" 
             end_date="5/2023"
             title="Teaching Assistant, Intro to Parallel Programming"
@@ -109,7 +112,7 @@ function App() {
             )
   )
 
-  timeline_event_arr.push(
+  timeline_event_arr[0]=(
     (<TimelineEvent start_date="6/2023" 
             end_date="8/2023"
             title="IoT-SITY REU"
@@ -155,11 +158,11 @@ function App() {
   )
 
 
-
-
-
-
-
+  let container_style= "container-lg offset-from-top floats-right"
+  const windowSize = useRef([window.innerWidth, window.innerHeight]);
+  if (windowSize.current[0] < 1600) {
+    container_style = "container-lg w-75 offset-from-top floats-right"
+  }
 
 
   return (
@@ -176,7 +179,7 @@ function App() {
 
       <NavBar first="Anton" last="Dmitriev" links_arr={sections_arr.map( x => x[1])}/>
 
-      <div className="container-lg w-75 offset-from-top floats-right">
+      <div className={container_style}>
 
         <div className="p-3 border-0 d-grid gap-3">
 
