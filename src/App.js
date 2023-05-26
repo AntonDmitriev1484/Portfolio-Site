@@ -14,8 +14,8 @@ function App() {
 
   const about_section_body = (
     <div>
-      <p>Undergraduate <span className="txt-h" >student</span> researcher at Washington University in St. Louis pursuing a Bachelors in Computer Science (2020-2024).</p>
-      <p>I'm a senior at WashU looking to pursue a graduate CS education</p>
+      <p>Undergraduate student researcher at Washington University in St. Louis pursuing a Bachelors in Computer Science (2020-2024).</p>
+      <p>I'm looking to pursue a graduate CS education and am in the process of applying to PhD programs.</p>
       <p> <a className="link-body"> Github </a> / <a className="link-body"> LinkedIn </a> / <a className="link-body"> Email </a> </p>
     </div>
   )
@@ -140,8 +140,37 @@ function App() {
   // ----
 
   const research_section_body = (
-    <>
-    </>
+    <div className="mt-2">
+    <h4><u>The Catoptric Surface (WashU)</u></h4>
+    <p> 
+      The Catoptric Surface is an interdisciplinary collaboration between WashU's
+      Sam Fox school of architecture and McKelvey school of engineering. 
+      
+      I worked on this project under <a className = "link-body" href='#'>Professor Roger Chamberlain</a>
+      for one academic year; I focused on designing and building 
+      <span className="txt-h"> ray-tracing simulations</span> of catoptric surfaces
+       in Unreal Engine 5, an industry standard game engine.
+       </p>
+
+    <p>
+      Physically, this looks like an array of 600 mirrors suspended along
+      the windows of a lecture hall. Each mirror has individual pan-tilt controls,
+      and as a result can generate unique ambient lighting patterns within the 
+      atrium it has been set up in.
+    </p>
+
+    <img src="logo512.png" className="bg-success" alt="asdf"/>
+
+    <p>
+      What if you wanted to create a specific lighting pattern on the atrium ceiling?
+      You need to employ some sort of <span className="txt-h"> optimization algorithm </span>
+      to the position of every mirror in the array, such that each mirror reflects light
+      closer to the desired target.
+    </p>
+
+    <p> Read <a className="link-body" href="https://sbs.wustl.edu/pubs/acmb18.pdf"> this </a> paper, if you want to learn more!</p>
+    
+    </div>
   )
 
   sections_arr.push(
@@ -164,9 +193,9 @@ function App() {
     container_style = "container-lg w-75 offset-from-top floats-right"
   }
 
+  //Might be easiest to just put a blank section at the top
 
   return (
-
   <div className="hero-container">
 
       <video

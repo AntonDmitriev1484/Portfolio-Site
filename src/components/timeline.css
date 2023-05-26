@@ -1,11 +1,11 @@
   
 /* https://www.youtube.com/watch?v=AIDiMA_C3sg */
   .timeline {
-    margin: 0 auto;
+    margin: 0 0;
     display: grid;
     grid-template-columns: 0.25fr 3px 1fr;
     color: #000000;
-    float: left;
+    float: inline-start;
   }
   
   .timeline__component {
