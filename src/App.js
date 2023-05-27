@@ -119,7 +119,7 @@ function App() {
     <div className="mt-2">
     <h4> The Catoptric Surface // WashU </h4>
 
-    <div className=" d-grid gap-3 p-3">
+    <div className=" d-grid gap-3 p-4">
 
       <TextImageRow 
         text = {
@@ -133,15 +133,18 @@ function App() {
           </p>
 
           <p> 
-            This project aims to use the sunlight reflected by this surface to create unique interior ambient lighting conditions.
+            This project aims to use the sunlight reflected by the Catoptric Surface to create unique interior ambient lighting conditions.
           </p>
+
+          {/* <img src="images/SingleMirror.jpg" className="p-1" height="200px" alt="asdf"/>) */}
+
           </>
           )
         }
         
         imageHTMLelements = {
-          [(<img src="images/SingleMirror.jpg" className="p-1" height="200px" alt="asdf"/>),
-          (<img src="images/SurfaceSideView.jpg" className="p-1" height="200px" alt="asdf"/>)]}
+          [
+          (<img src="images/SurfaceSideView.jpg" className="p-1" height="250px" alt="asdf"/>)]}
             
             />
 
@@ -155,12 +158,12 @@ function App() {
           <p>
             My research tackles this question using the <span className="txt-h"> ray-tracing </span> features 
             readily available in <span className="txt-h"> game engines</span>. I designed and built ray-tracing
-            simulations of catoptric surfaces in Unreal Engine 5, an industry standard game engine.
+            simulations of catoptric surfaces in Unreal Engine 5 - an industry standard game engine.
           </p>
           <p>
-            I developed a system for building and simulating any catoptric surface in UE5. 
-            Explored and tested various <span className="txt-h">optimization algorithms </span> for finding surface configurations.
-            And extended the final game to function as a <span className="txt-h"> user interface</span>.
+            I developed tools for building and simulating any catoptric surface in UE5. 
+            I Explored and tested various <span className="txt-h">optimization algorithms </span> for finding surface configurations.
+            And I extended the final game to function as a <span className="txt-h"> user interface</span>.
           </p>
 
           <p> Read <a className="link-body" href="https://sbs.wustl.edu/pubs/acmb18.pdf"> this </a> paper 
