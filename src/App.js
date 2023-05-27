@@ -10,7 +10,8 @@ import { useRef } from 'react';
 
 function App() {
 
-  let sections_arr = []
+  let sections_arr = [ ]
+
 
   const about_section_body = (
     <div>
@@ -38,21 +39,6 @@ function App() {
             place="WashU"
             body= {(
               <>
-              {/* <p class="timeline__paragraph">
-                  Intro to CS is WashU's highest enrolled class, it hires roughly 50 TA's per semester.
-              </p>
-              <ul>
-                  <li>
-                      Directed office hours and group learning sessions while also overseeing 30 teaching assistants as a section lead.
-                  </li>
-                  <li>
-                      Graded and provided feedback on student work.
-                  </li>
-                  <li>
-                      Assisted 300+ students in one on one help sessions.
-                  </li>
-                  
-                  </ul> */}
                   </>
             )}
             />
@@ -66,18 +52,6 @@ function App() {
             place="iDTech"
             body= {(
               <>
-              {/* <p class="timeline__paragraph">
-                  Suffered a lot
-              </p>
-              <ul>
-                  <li>
-                    Taught computer science fundamentals in Python, Java, and Lua to classrooms of 10 K-12 students.
-                  </li>
-                  <li>
-                    Created accelerated curricula for K-12 students derived from university level computer science courses.
-                  </li>
-                  
-                  </ul> */}
                   </>
             )}
             />
@@ -141,7 +115,7 @@ function App() {
 
   const research_section_body = (
     <div className="mt-2">
-    <h4><u>The Catoptric Surface (WashU)</u></h4>
+    <h4> The Catoptric Surface // WashU </h4>
     <p> 
       The Catoptric Surface is an interdisciplinary collaboration between WashU's
       Sam Fox school of architecture and McKelvey school of engineering. 
@@ -187,13 +161,17 @@ function App() {
   )
 
 
-  let container_style= "container-lg offset-from-top floats-right"
+  let container_style= "position-static offset-from-top floats-right bg-success"
   const windowSize = useRef([window.innerWidth, window.innerHeight]);
   if (windowSize.current[0] < 1600) {
-    container_style = "container-lg w-75 offset-from-top floats-right"
+    container_style = " w-75 offset-from-top"
   }
 
   //Might be easiest to just put a blank section at the top
+
+  //Ok
+  //Scrollable div takes up middle part of the entire page
+  //has a small invisible box that pushes the rest of the content down to be inline with the navbar
 
   return (
   <div className="hero-container">
@@ -208,15 +186,17 @@ function App() {
 
       <NavBar first="Anton" last="Dmitriev" links_arr={sections_arr.map( x => x[1])}/>
 
-      <div className={container_style}>
 
-        <div className="p-3 border-0 d-grid gap-3">
+      {/* <div className={container_style}> */}
 
+
+        <div className="overflow-auto p-3 w-75 border-0 d-grid gap-3">
+        <div className="offset-spacer"></div>
               {sections_arr.map( x => x[0])}
 
         </div>
 
-      </div>
+      {/* </div> */}
 
     </div>
     

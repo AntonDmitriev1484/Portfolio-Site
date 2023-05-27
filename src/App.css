@@ -2,7 +2,14 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  border: 0;
+  outline: 0;
   --bs-body-font-family: 'Fira Code', sans-serif;
+  
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 .link-sidebar {
@@ -66,13 +73,16 @@
 }
 
 
-.my-grid-lr-structure {
-
-}
-
 .offset-from-top {
-  margin-top: 400px;
+  margin-left: 10%;
+  width: 75%;
 }
+
+.offset-spacer {
+  height:60px;
+  width: 100px;
+}
+
 
 .offset-from-top2 {
   margin-top: 120px;
