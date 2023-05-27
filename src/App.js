@@ -115,7 +115,7 @@ function App() {
   // ----
 
   const research_section_body = (
-    
+
     <div className="mt-2">
     <h4> The Catoptric Surface // WashU </h4>
 
@@ -133,7 +133,7 @@ function App() {
           </p>
 
           <p> 
-            This project aims to use this surface to create unique interior ambient lighting conditions.
+            This project aims to use the sunlight reflected by this surface to create unique interior ambient lighting conditions.
           </p>
           </>
           )
@@ -164,7 +164,7 @@ function App() {
           </p>
 
           <p> Read <a className="link-body" href="https://sbs.wustl.edu/pubs/acmb18.pdf"> this </a> paper 
-    if you want to learn more about the project!</p>
+    if you want to learn more about the project as a whole!</p>
 
           </>
         }
