@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './components/hero.css';
 import Timeline from './components/Timeline';
 import TimelineEvent from './components/TimelineEvent';
+import TextImageRow from './components/TextImageRow';
 import { useRef } from 'react';
 
 function App() {
@@ -114,35 +115,71 @@ function App() {
   // ----
 
   const research_section_body = (
+    
     <div className="mt-2">
     <h4> The Catoptric Surface // WashU </h4>
-    <p> 
-      The Catoptric Surface is an interdisciplinary collaboration between WashU's
-      Sam Fox school of architecture and McKelvey school of engineering. 
+
+    <div className=" d-grid gap-3 p-3">
+
+      <TextImageRow 
+        text = {
+          (<>
+          <p> 
+            The Catoptric Surface is <span className="txt-h"> cyber-physical system </span> of 600 small motorized mirrors that hang in a sun-lit gallery.
+            This project is an interdisciplinary collaboration between WashU's Sam Fox school of architecture and McKelvey school of engineering. 
+            
+            I worked on this project under <a className = "link-body" href='#'>Professor Roger Chamberlain </a>
+            for the 2022-2023 academic year.
+          </p>
+
+          <p> 
+            This project aims to use this surface to create unique interior ambient lighting conditions.
+          </p>
+          </>
+          )
+        }
+        
+        imageHTMLelements = {
+          [(<img src="images/SingleMirror.jpg" className="p-1" height="200px" alt="asdf"/>),
+          (<img src="images/SurfaceSideView.jpg" className="p-1" height="200px" alt="asdf"/>)]}
+            
+            />
+
+      <TextImageRow
+        text = {
+          <>
+          <p>
+            Suppose someone in the gallery wants to see a specific lighting pattern on the ceiling.
+            How would the Catoptric Surface direct its mirrors to form that pattern?
+          </p>
+          <p>
+            My research tackles this question using the <span className="txt-h"> ray-tracing </span> features 
+            readily available in <span className="txt-h"> game engines</span>. I designed and built ray-tracing
+            simulations of catoptric surfaces in Unreal Engine 5, an industry standard game engine.
+          </p>
+          <p>
+            I developed a system for building and simulating any catoptric surface in UE5. 
+            Explored and tested various <span className="txt-h">optimization algorithms </span> for finding surface configurations.
+            And extended the final game to function as a <span className="txt-h"> user interface</span>.
+          </p>
+
+          <p> Read <a className="link-body" href="https://sbs.wustl.edu/pubs/acmb18.pdf"> this </a> paper 
+    if you want to learn more about the project!</p>
+
+          </>
+        }
+
+        imageHTMLelements = {
+          [(<img src="images/11-2-22-Research-3.jpg" height="250px" alt="asdf"/>)]}
+        
+        />
+
       
-      I worked on this project under <a className = "link-body" href='#'>Professor Roger Chamberlain</a>
-      for one academic year; I focused on designing and building 
-      <span className="txt-h"> ray-tracing simulations</span> of catoptric surfaces
-       in Unreal Engine 5, an industry standard game engine.
-       </p>
 
-    <p>
-      Physically, this looks like an array of 600 mirrors suspended along
-      the windows of a lecture hall. Each mirror has individual pan-tilt controls,
-      and as a result can generate unique ambient lighting patterns within the 
-      atrium it has been set up in.
-    </p>
 
-    <img src="logo512.png" className="bg-success" alt="asdf"/>
+    </div>
 
-    <p>
-      What if you wanted to create a specific lighting pattern on the atrium ceiling?
-      You need to employ some sort of <span className="txt-h"> optimization algorithm </span>
-      to the position of every mirror in the array, such that each mirror reflects light
-      closer to the desired target.
-    </p>
-
-    <p> Read <a className="link-body" href="https://sbs.wustl.edu/pubs/acmb18.pdf"> this </a> paper, if you want to learn more!</p>
+    
     
     </div>
   )
@@ -167,8 +204,6 @@ function App() {
     container_style = " w-75 offset-from-top"
   }
 
-  //Might be easiest to just put a blank section at the top
-
   //Ok
   //Scrollable div takes up middle part of the entire page
   //has a small invisible box that pushes the rest of the content down to be inline with the navbar
@@ -187,16 +222,11 @@ function App() {
       <NavBar first="Anton" last="Dmitriev" links_arr={sections_arr.map( x => x[1])}/>
 
 
-      {/* <div className={container_style}> */}
-
-
         <div className="overflow-auto p-3 w-75 border-0 d-grid gap-3">
-        <div className="offset-spacer"></div>
+              <div className="offset-spacer"></div>
               {sections_arr.map( x => x[0])}
 
         </div>
-
-      {/* </div> */}
 
     </div>
     

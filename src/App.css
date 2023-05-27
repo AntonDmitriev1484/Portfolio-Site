@@ -100,3 +100,8 @@
 .floats-right {
   float:right
 }
+
+.left-research-text {
+  float:left;
+  width:50%;
+}
