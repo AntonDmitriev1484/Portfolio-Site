@@ -17,7 +17,10 @@ function App() {
   const about_section_body = (
     <div>
       <p>Undergraduate student researcher at Washington University in St. Louis pursuing a Bachelors in Computer Science (2020-2024).</p>
-      <p>I'm looking to pursue a graduate CS education and am in the process of applying to PhD programs.</p>
+      <p>Over the past three years, I've grown to love learning computer science. 
+        Graduate school is my next step, as it will allow me to continue studying, research, and teaching CS.
+        I'm currently applying to PhD programs, and also searching out potential software engineering internships or co-op opportunities.
+      </p>
       <p> <a className="link-body"> Github </a> / <a className="link-body"> LinkedIn </a> / <a className="link-body"> Email </a> </p>
     </div>
   )
